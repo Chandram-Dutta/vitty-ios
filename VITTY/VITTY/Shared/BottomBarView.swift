@@ -14,7 +14,7 @@ struct BottomBarView: View {
 	
 	var body: some View {
 		HStack {
-			TabButtonView(value: $presentTab, name: "Courses", image: "book.closed.fill", tabNo: 0, namespace: bottomBarAnimation)
+//			TabButtonView(value: $presentTab, name: "Courses", image: "book.closed.fill", tabNo: 0, namespace: bottomBarAnimation)
 			TabButtonView(value: $presentTab, name: "Schedule", image: "calendar.badge.clock", tabNo: 1, namespace: bottomBarAnimation)
 			TabButtonView(value: $presentTab, name: "Connect", image: "person.2.fill", tabNo: 2, namespace: bottomBarAnimation)
 		}
@@ -28,7 +28,7 @@ struct BottomBarView: View {
 		.gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
 			.onEnded({ value in
 				if value.translation.width < 0 {
-					if presentTab == 0 {
+					if presentTab == 1 {
 						return
 					}
 					withAnimation (.bouncy(extraBounce: 0.1)) {

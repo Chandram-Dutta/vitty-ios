@@ -9,18 +9,18 @@ import SwiftUI
 
 struct HomeView: View {
 	
-	@State private var selectedPage = 0
+	@State private var selectedPage = 1
 	
 	var body: some View {
 		ZStack (alignment: .bottom) {
 			switch (selectedPage) {
-			case 0:
-				NavigationStack {
-					ZStack {
-						BackgroundView()
-					}
-					.navigationTitle("Courses")
-				}
+//			case 0:
+//				NavigationStack {
+//					ZStack {
+//						BackgroundView()
+//					}
+//					.navigationTitle("Courses")
+//				}
 			case 1:
 				TimeTableView(friend: nil)
 					.tabItem {
